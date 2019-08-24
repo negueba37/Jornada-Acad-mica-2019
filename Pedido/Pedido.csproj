@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3344DDBB-D577-4675-903D-D0E78A5D0AD1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Pedido</RootNamespace>
+    <AssemblyName>Pedido</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BackupRestauracao\FormBackupRestauracao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BackupRestauracao\FormBackupRestauracao.designer.cs">
+      <DependentUpon>FormBackupRestauracao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Banco.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Banco.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Cache.cs" />
+    <Compile Include="Cadastro\FormCadastroCidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro\FormCadastroCidade.designer.cs">
+      <DependentUpon>FormCadastroCidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro\FormCadastroCor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro\FormCadastroCor.designer.cs">
+      <DependentUpon>FormCadastroCor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro\FormCadastroEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro\FormCadastroEstado.designer.cs">
+      <DependentUpon>FormCadastroEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro\FormCadastroPessoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro\FormCadastroPessoa.designer.cs">
+      <DependentUpon>FormCadastroPessoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro\FormCadastroProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro\FormCadastroProduto.designer.cs">
+      <DependentUpon>FormCadastroProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro\FormCadastroTamanho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro\FormCadastroTamanho.designer.cs">
+      <DependentUpon>FormCadastroTamanho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cadastro\FormCadastroUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cadastro\FormCadastroUsuario.Designer.cs">
+      <DependentUpon>FormCadastroUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu.Designer.cs">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Movimento\FormMovimentoPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Movimento\FormMovimentoPedido.designer.cs">
+      <DependentUpon>FormMovimentoPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pesquisa\FormPesquisaCidade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pesquisa\FormPesquisaCidade.designer.cs">
+      <DependentUpon>FormPesquisaCidade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pesquisa\FormPesquisaCor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pesquisa\FormPesquisaCor.designer.cs">
+      <DependentUpon>FormPesquisaCor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pesquisa\FormPesquisaEstado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pesquisa\FormPesquisaEstado.designer.cs">
+      <DependentUpon>FormPesquisaEstado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pesquisa\FormPesquisaPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pesquisa\FormPesquisaPedido.designer.cs">
+      <DependentUpon>FormPesquisaPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pesquisa\FormPesquisaPessoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pesquisa\FormPesquisaPessoa.designer.cs">
+      <DependentUpon>FormPesquisaPessoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pesquisa\FormPesquisaProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pesquisa\FormPesquisaProduto.designer.cs">
+      <DependentUpon>FormPesquisaProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pesquisa\FormPesquisaTamanho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pesquisa\FormPesquisaTamanho.designer.cs">
+      <DependentUpon>FormPesquisaTamanho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pesquisa\FormPesquisaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pesquisa\FormPesquisaUsuario.Designer.cs">
+      <DependentUpon>FormPesquisaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BackupRestauracao\FormBackupRestauracao.resx">
+      <DependentUpon>FormBackupRestauracao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro\FormCadastroCidade.resx">
+      <DependentUpon>FormCadastroCidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro\FormCadastroCor.resx">
+      <DependentUpon>FormCadastroCor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro\FormCadastroEstado.resx">
+      <DependentUpon>FormCadastroEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro\FormCadastroPessoa.resx">
+      <DependentUpon>FormCadastroPessoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro\FormCadastroProduto.resx">
+      <DependentUpon>FormCadastroProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro\FormCadastroTamanho.resx">
+      <DependentUpon>FormCadastroTamanho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cadastro\FormCadastroUsuario.resx">
+      <DependentUpon>FormCadastroUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Movimento\FormMovimentoPedido.resx">
+      <DependentUpon>FormMovimentoPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pesquisa\FormPesquisaCidade.resx">
+      <DependentUpon>FormPesquisaCidade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pesquisa\FormPesquisaCor.resx">
+      <DependentUpon>FormPesquisaCor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pesquisa\FormPesquisaEstado.resx">
+      <DependentUpon>FormPesquisaEstado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pesquisa\FormPesquisaPedido.resx">
+      <DependentUpon>FormPesquisaPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pesquisa\FormPesquisaPessoa.resx">
+      <DependentUpon>FormPesquisaPessoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pesquisa\FormPesquisaProduto.resx">
+      <DependentUpon>FormPesquisaProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pesquisa\FormPesquisaTamanho.resx">
+      <DependentUpon>FormPesquisaTamanho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pesquisa\FormPesquisaUsuario.resx">
+      <DependentUpon>FormPesquisaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Banco.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Banco.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Banco.dbml.layout">
+      <DependentUpon>Banco.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
