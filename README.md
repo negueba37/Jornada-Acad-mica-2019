@@ -1,2 +1,2 @@
-# Jornada-Acad-mica-2019
+# Jornada-Academica-2019
 Sistema desenvolvido para cadastrar pedidos 
